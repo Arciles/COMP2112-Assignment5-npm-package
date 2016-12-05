@@ -2,11 +2,12 @@
   "name": "chatbot-comp2112",
   "version": "0.1.0",
   "description": "development chatbot for comp2112.",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
-    "start": "http-server ./demo -o",
+    "start": "http-server ./demo -c-1 -o",
     "build": "browserify src/index.js -o build/chatbot.js",
-    "test": "mocha"
+    "test": "mocha test/",
+    "lint": "jshint ./src/chatbot.js"
   },
   "repository": {
     "type": "git",
@@ -22,15 +23,26 @@
   "bugs": {
     "url": "https://github.com/Arciles/COMP2112-Assignment5-npm-package/issues"
   },
+  "jshintConfig": {
+    "curly": true,
+    "eqeqeq": true,
+    "undef": true
+  },
   "homepage": "https://github.com/Arciles/COMP2112-Assignment5-npm-package#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
     "lodash": "^4.17.2"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
     "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
     "http-server": "^0.9.0",
+    "jshint": "^2.9.4",
     "mocha": "^3.2.0"
   }
 }
