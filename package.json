@@ -1,0 +1,36 @@
+{
+  "name": "chatbot-comp2112",
+  "version": "0.1.0",
+  "description": "development chatbot for comp2112.",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./demo -o",
+    "build": "browserify src/index.js -o build/chatbot.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arciles/COMP2112-Assignment5-npm-package.git"
+  },
+  "keywords": [
+    "chatbot",
+    "javascript",
+    "comp2112"
+  ],
+  "author": "Esat IBIS <esat.taha.ibis@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Arciles/COMP2112-Assignment5-npm-package/issues"
+  },
+  "homepage": "https://github.com/Arciles/COMP2112-Assignment5-npm-package#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "lodash": "^4.17.2"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "chai": "^3.5.0",
+    "http-server": "^0.9.0",
+    "mocha": "^3.2.0"
+  }
+}
