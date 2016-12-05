@@ -1,11 +1,11 @@
 {
   "name": "chatbot-comp2112",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "development chatbot for comp2112.",
   "main": "./src/index.js",
   "scripts": {
     "start": "http-server ./demo -c-1 -o",
-    "build": "browserify src/index.js -o build/chatbot.js && browserify src/index.js -o demo/build/chatbot.js && grunt",
+    "build": "grunt",
     "test": "mocha test/",
     "lint": "jshint ./src/chatbot.js"
   },
@@ -38,6 +38,7 @@
     "browserify": "^13.1.1",
     "chai": "^3.5.0",
     "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-nodeunit": "^1.0.0",
