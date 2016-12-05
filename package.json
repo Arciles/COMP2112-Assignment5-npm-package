@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "start": "http-server ./demo -c-1 -o",
-    "build": "browserify src/index.js -o build/chatbot.js",
+    "build": "browserify src/index.js -o build/chatbot.js && browserify src/index.js -o demo/build/chatbot.js",
     "test": "mocha test/",
     "lint": "jshint ./src/chatbot.js"
   },
