@@ -13,23 +13,25 @@ function chatbot(io) {
        return "hello!!";
 
      if(match('what[^ ]* up') || match('sup') || match('how are you'))
-       return "this github thing is pretty cool, huh?";
+       return "I'm realy good! thanks for asking.";
 
-     if(match('l(ol)+') || match('(ha)+(h|$)') || match('lmao'))
-       return "what's so funny?";
+     if(match("what[^ ]* your name") || match("tell me your name") || match("can I get your name") || match("what is your name"))
+         return "My name is Hal.";
 
-     if(match('^no+(\\s|!|\\.|$)'))
-       return "don't be such a negative nancy :(";
+     if(match("what[^ ]* your favorite food") || match("what do you like to eat") || match("what is your favorite food"))
+         return "My favorite food is baklava. I just love it. You should try it if you haven't.";
 
-     if(match('(cya|bye|see ya|ttyl|talk to you later)'))
-       return ["alright, see you around", "good teamwork!"];
+     if(match("tell me a joke") || match("tell me something funny") || match("make me laugh"))
+         return "Whoever invented knock knock jokes should get a no bell prize.";
 
-     if(match('(dumb|stupid|is that all)'))
-       return ["hey i'm just a proof of concept", "you can make me smarter if you'd like"];
+     if(match("tell me something turkish"))
+         return "Aman sabahlar olmasin.";
 
-     if(message == 'noop')
-       return;
+     if(match("what[^ ]* the meaning of life") || match("what is the meaning of life"))
+         return "42";
+
    }
+   // this will be returned if the message is empty or doesn't fit any of the patterns
    return "Sorry, I don't understand.";
 
 
